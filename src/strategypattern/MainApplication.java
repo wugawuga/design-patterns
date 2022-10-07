@@ -2,13 +2,16 @@ package strategypattern;
 
 public class MainApplication {
 	public static void main(String[] args) {
-		Bin bin = new Bin();
+		Person bin = new Bin();
+		bin.say();
 		bin.eat();
 
-		Jin jin = new Jin();
+		Person jin = new Jin();
+		jin.say();
 		jin.eat();
 
-		Anna anna = new Anna();
+		Person anna = new Anna();
+		anna.say();
 		anna.eat();
 	}
 }
