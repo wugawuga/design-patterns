@@ -8,5 +8,9 @@ public abstract class Person {
 		sayStrategy.say();
 	}
 
+	void setSayStrategy(SayStrategy sayStrategy) {
+		this.sayStrategy = sayStrategy;
+	}
+
 	abstract void eat();
 }

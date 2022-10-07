@@ -3,7 +3,7 @@ package strategypattern;
 public class Anna extends Person {
 
 	public Anna() {
-		sayStrategy = new HungryStrategy();
+		sayStrategy = new NotHungryStrategy();
 	}
 
 	@Override
