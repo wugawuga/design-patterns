@@ -2,8 +2,10 @@ package strategypattern;
 
 public abstract class Person {
 
+	protected SayStrategy sayStrategy;
+
 	void say() {
-		System.out.println("배고파");
+		sayStrategy.say();
 	}
 
 	abstract void eat();
