@@ -1,2 +1,5 @@
-package observerpattern;public interface DisplayElement {
+package observerpattern;
+
+public interface DisplayElement {
+	void display();
 }
