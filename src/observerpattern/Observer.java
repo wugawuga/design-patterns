@@ -1,2 +1,5 @@
-package observerpattern;public class Observer {
+package observerpattern;
+
+public interface Observer {
+	void update(float temp, float humidity, float pressure);
 }
