@@ -2,8 +2,16 @@ package singletonpattern;
 
 public class ChocolateBoiler {
 
+	private static ChocolateBoiler chocolateBoiler;
 	private boolean empty;
 	private boolean boiled;
+
+	public static ChocolateBoiler getInstance() {
+		if (chocolateBoiler == null) {
+			chocolateBoiler = new ChocolateBoiler();
+		}
+		return chocolateBoiler;
+	}
 
 	private ChocolateBoiler() {
 		this.empty = true;
