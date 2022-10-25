@@ -6,9 +6,13 @@ public class Singleton {
 	private Singleton() {
 	}
 
-	public static synchronized Singleton getInstance() {
+	public static Singleton getInstance() {
 		if (uniqueInstance == null) {
-			return uniqueInstance = new Singleton();
+			synchronized (Singleton.class) {
+				if (uniqueInstance == null) {
+					return uniqueInstance = new Singleton();
+				}
+			}
 		}
 		return uniqueInstance;
 	}
