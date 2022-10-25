@@ -1,15 +1,12 @@
 package singletonpattern;
 
 public class Singleton {
-	private static Singleton unique;
+	private static Singleton uniqueInstance = new Singleton();
 
-	public Singleton() {
+	private Singleton() {
 	}
 
 	public static Singleton getInstance() {
-		if (unique == null) {
-			unique = new Singleton();
-		}
-		return unique;
+		return uniqueInstance;
 	}
 }
