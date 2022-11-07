@@ -1,6 +1,6 @@
 package factorypattern;
 
-public class CutletStore {
+public abstract class CutletStore {
 	CutletFactory cutletFactory;
 
 	public CutletStore(CutletFactory cutletFactory) {
@@ -10,8 +10,10 @@ public class CutletStore {
 	Cutlet orderCutlet(String type) {
 		Cutlet cutlet = null;
 
-		cutlet = cutletFactory.orderCutlet(type);
+		cutlet = createCutlet(type);
 
 		return cutlet;
 	}
+
+	abstract Cutlet createCutlet(String type);
 }
