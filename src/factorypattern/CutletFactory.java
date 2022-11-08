@@ -1,16 +1,9 @@
 package factorypattern;
 
-public class CutletFactory {
+public interface CutletFactory {
+    Cutlet createCutlet();
 
-	Cutlet orderCutlet(String type) {
-		Cutlet cutlet = null;
+    Source createSource();
 
-		if (type.equals("cheese")) {
-			cutlet = new CheeseCutlet();
-		} else if (type.equals("sweetPotato")) {
-			cutlet = new SweetPotatoCutlet();
-		}
-
-		return cutlet;
-	}
+    Oil createOil();
 }

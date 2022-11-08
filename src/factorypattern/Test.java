@@ -3,10 +3,10 @@ package factorypattern;
 public class Test {
     public static void main(String[] args) {
 
-        CutletMethodFactory wugaFactory = new WugaCutletMethodFactory();
-        Cutlet wugaCutlet = wugaFactory.orderCutlet();
+        CutletFactoryInFactory factoryInFactory = new ChefCutletFactoryInFactory();
 
-        CutletMethodFactory jinFactory = new JinCutletMethodFactory();
-        Cutlet jinCutlet = jinFactory.orderCutlet();
+        CutletFactory cutletFactory = factoryInFactory.request("wuga");
+        cutletFactory.createOil();
+        cutletFactory.createSource();
     }
 }
