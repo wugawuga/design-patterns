@@ -1,14 +1,14 @@
 package adapterpattern;
 
 public class RobotAdapter implements Animal {
-    private final RobotTiger robotTiger;
+    private final Robot robot;
 
-    public RobotAdapter(RobotTiger robotTiger) {
-        this.robotTiger = robotTiger;
+    public RobotAdapter(Robot robot) {
+        this.robot = robot;
     }
 
     @Override
     public String getName() {
-        return robotTiger.getName();
+        return robot.getModelName();
     }
 }

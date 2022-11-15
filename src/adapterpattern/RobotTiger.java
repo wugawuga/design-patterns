@@ -1,9 +1,10 @@
 package adapterpattern;
 
-public class RobotTiger {
+public class RobotTiger implements Robot {
     private final String name = "로봇호랑이";
 
-    public String getName() {
+    @Override
+    public String getModelName() {
         return name;
     }
 }
