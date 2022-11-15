@@ -12,6 +12,10 @@ public class Test {
         // 로봇호랑이가 왔을 때도 내보내고 싶다.
         // Animal 타입이 아니기 때문에 에러발생
         RobotTiger robotTiger = new RobotTiger();
-        man.쫓아내(robotTiger);
+//        man.쫓아내(robotTiger);
+
+        // 이때 어댑터 패턴 적용
+        RobotAdapter adapter = new RobotAdapter(robotTiger);
+        man.쫓아내(adapter);
     }
 }
