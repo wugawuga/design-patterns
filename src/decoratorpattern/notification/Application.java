@@ -49,5 +49,16 @@ public class Application {
         Notifier onlyEmailNotifier = new EmailNotifier();
         // NPE 발생
         onlyEmailNotifier.send();
+        System.out.println("--end--");
+
+        // 8. 문자 알림
+        Notifier onlySmsNotifier = new SmsNotifier();
+        onlySmsNotifier.send();
+        System.out.println("--end--");
+
+        // 9. 문자 알림 + 이메일 알림
+        Notifier smsAndEmailNotifier = new EmailNotifier(new SmsNotifier());
+        smsAndEmailNotifier.send();
+        System.out.println("--end--");
     }
 }

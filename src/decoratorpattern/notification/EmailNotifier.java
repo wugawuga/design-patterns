@@ -14,7 +14,9 @@ public class EmailNotifier implements Notifier {
 
     @Override
     public void send() {
-        notifier.send();
+        if (notifier != null) {
+            notifier.send();
+        }
         System.out.println("이메일 알림");
     }
 }
