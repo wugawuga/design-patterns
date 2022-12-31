@@ -17,14 +17,19 @@ public class Application {
             command = sc.nextLine();
             System.out.println();
 
-            if (command.equals("1")) {
-                player.getState().standUp();
-            } else if (command.equals("2")) {
-                player.getState().sitDown();
-            } else if (command.equals("3")) {
-                player.getState().walk();
-            } else if (command.equals("4")) {
-                player.getState().run();
+            switch (command) {
+                case "1":
+                    player.getState().standUp();
+                    break;
+                case "2":
+                    player.getState().sitDown();
+                    break;
+                case "3":
+                    player.getState().walk();
+                    break;
+                case "4":
+                    player.getState().run();
+                    break;
             }
         }
     }
